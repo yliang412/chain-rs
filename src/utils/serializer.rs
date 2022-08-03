@@ -14,7 +14,7 @@ where
 
 /// Deserializes from a slice of bytes to data of type T
 #[allow(dead_code)]
-pub fn deserialze<'a, T>(data: &'a [u8]) -> Result<T, BlockchainError>
+pub fn deserialize<'a, T>(data: &'a [u8]) -> Result<T, BlockchainError>
 where
     T: Deserialize<'a> + ?Sized,
 {

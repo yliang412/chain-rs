@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 use crate::ProofOfWork;
 
 /// A block header storing metadata
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone, Default)]
 pub struct BlockHeader {
     /// Timestamp at creation of the block
     timestamp: i64,
@@ -27,7 +27,7 @@ impl BlockHeader {
     }
 }
 
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone, Default)]
 pub struct Block {
     /// A block header storing metadata
     header: BlockHeader,
